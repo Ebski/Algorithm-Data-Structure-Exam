@@ -14,6 +14,8 @@ public int fibonacci(int n)
     return fibonacci(n - 1) + fibonacci(n - 2);
 } 
 ```
+Code can be found [here]()
+
 This would be a solution on how to get the Fibonacci numbers using a recursive strategy. The Fibonacci Sequence is: 1, 1, 2, 3, 5, 8, 13, 21 .......
 
 If using the example of 5 this code would return 5 + 3 so 8. 
@@ -38,7 +40,25 @@ It's not always a good idea to use Recursive as it can be very costly on memory.
         return FibonacciNumbers[n];
    } 
 ```
-This is due to the amount of calls to the same method is not in anyway controlled and can become very very high. But in other cases such as balanced search trees recursion will work very well, as the cost will be more or less the same at all times.
+Code can be found [here]()
+
+This is due to the amount of calls to the same method is not in anyway controlled and can become very very high. But in other cases such as balanced search trees recursion will work very well, as the cost will be more or less the same at all times. An example of this would be in the union find example of weighted quick union where the root needs to be found. Here the code looks like this.
+
+```c#
+    private int root(int i)
+    {
+        if (i == id[i])
+        {
+            return i;
+        }
+        id[i] = id[id[i]];
+        i = id[i];
+        return root(i);
+    }
+```
+Code can be found [here]()
+
+As the tree is weighted the cost is close to constant, and will never become to high.
 
 ### Binary Search
 
@@ -68,6 +88,8 @@ The following is an example of how binary search can be used to find the square 
         return mid;
     }
 ```
+Code can be found [here]()
+
 If we as an example was going to find the square root of 16 by using this code the code would start by finding a middle value that is 8. It will then find the value of 8^2 and find out if that is bigger than 16. As it is the new high value would become 8 and the new middle value would become 4. 4^2 is 16 and that means we would set the low value to 4 as well. Now we have that high - low is less than 0,0000000000001 and that it is actually exactly 0 which means we have found the square root of 16 by using a binary search.
 
 ### Union Find

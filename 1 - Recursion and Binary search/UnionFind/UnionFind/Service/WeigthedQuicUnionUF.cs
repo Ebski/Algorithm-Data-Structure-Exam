@@ -29,12 +29,13 @@ namespace UnionFind.Service
         /// <returns></returns>
         private int root(int i)
         {
-            while (i != id[i])
+            if (i == id[i])
             {
-                id[i] = id[id[i]];
-                i = id[i];
+                return i;
             }
-            return i;
+            id[i] = id[id[i]];
+            i = id[i];
+            return root(i);
         }
 
         public void union(int p, int q)
