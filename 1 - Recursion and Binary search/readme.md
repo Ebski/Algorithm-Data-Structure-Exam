@@ -88,7 +88,7 @@ The following is an example of how binary search can be used to find the square 
         return mid;
     }
 ```
-Code can be found [here]()
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/1%20-%20Recursion%20and%20Binary%20search/RecursionAndBinarySearch/RecursionAndBinarySearch/Services/BinarySearch.cs)
 
 If we as an example was going to find the square root of 16 by using this code the code would start by finding a middle value that is 8. It will then find the value of 8^2 and find out if that is bigger than 16. As it is the new high value would become 8 and the new middle value would become 4. 4^2 is 16 and that means we would set the low value to 4 as well. Now we have that high - low is less than 0,0000000000001 and that it is actually exactly 0 which means we have found the square root of 16 by using a binary search.
 
