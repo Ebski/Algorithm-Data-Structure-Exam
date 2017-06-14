@@ -45,7 +45,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\GetFibonacci.cs" />
+    <Compile Include="Services\BinarySearch.cs" />
+    <Compile Include="Services\Fibonacci.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
