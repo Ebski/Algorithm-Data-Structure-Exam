@@ -1,8 +1,16 @@
 # Bags, Queues and Stacks
 
-Bags, Queues and Stacks are all fundamental data types. They are used to store a collection of objects, and all have the same functionality. They should all have the operations insert, remove, iterate, count and test if empty. The difference between them is how we insert and how we remove the objects in the respective collections.
+Bags, Queues and Stacks are all fundamental data types. They are used to store a collection of objects, and all have the same functionality. queues and stacks should have the operations insert, remove, iterate, count and test if empty. Bag is simpler and should just have add and then a way to iterate through all items in the bag. The difference between them is how we insert and how we remove the objects in the respective collections.
 
 ### Bags
+
+Bags are the simples datatypes. They work exactly like a bag in the way that we throw stuff in there and are not really interested in how they land. What we are interested in is to iterate through the bag at some point to find all the data down there. To do this with an Array is extremely simple. We have an array, an add method, a resize method, a count method and an Iterate method.
+
+C# implementation can be found [here]().
+
+We can also implement a bag using a Linked List. As with the array this is also very easy. We create a nested inner class called Node, has a reference to a node called first, and every time we add a Node we just add it to the front of the List. We then also have an iterator that can go through the linked list and print everything in the bag.
+
+C# implementation can be found [here]().
 
 ### Queues
 
@@ -44,7 +52,7 @@ public T dequeue()
 }
 ```
 
-Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Queues/LinkedListQueue.cs).
+Code can be found [here]().
 
 It's also possible to make a queue with an array but it's a lot more cumbersome. For this we need to keep a reference to the head and the tail of the objects in the array. When we enqueue we add a new item at the tail, and when we dequeue we remove an item from the head. The problem with this is that we can end up with arrays that looks like this:
 
@@ -53,7 +61,7 @@ It's also possible to make a queue with an array but it's a lot more cumbersome.
 | Array placement | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
 | references      |      |      | head |      |      |      | tail |      |      |
 
-Furthermore we have to resize when the tail reaches the end of the array as well as if the array gets to big. An example of a try of implementing this can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Queues/ArrayQueue.cs)
+Furthermore we have to resize when the tail reaches the end of the array as well as if the array gets to big. An example of a try of implementing this can be found [here]()
 
 ### Stacks
 
@@ -93,7 +101,7 @@ public T pop()
     return item;
 }
 ```
-Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/LinkedListStack.cs).
+Code can be found [here]().
 
 ##### Array
 
@@ -135,7 +143,7 @@ public T pop()
         return item;
     }
 ```
-Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/ArrayStack.cs).
+Code can be found [here]().
 
 ##### Conclusion
 

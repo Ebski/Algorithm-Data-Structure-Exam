@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 
 namespace Bags_Queues_and_Stacks.Services.Queues
@@ -68,6 +70,19 @@ namespace Bags_Queues_and_Stacks.Services.Queues
                 copy[i] = q[head + i];
             }
             q = copy;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < N; i++)
+            {
+                yield return q[i + head];
+            }
         }
     }
 }

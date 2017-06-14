@@ -1,4 +1,7 @@
-﻿namespace Bags_Queues_and_Stacks.Services.Queues
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bags_Queues_and_Stacks.Services.Queues
 {
     public class LinkedListQueue<T> : IQueue<T>
     {
@@ -56,6 +59,21 @@
                 node = node.next;
             }
             return count;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node current = first;
+            while (current != null)
+            {
+                yield return current.item;
+                current = current.next;
+            }
         }
 
         private class Node

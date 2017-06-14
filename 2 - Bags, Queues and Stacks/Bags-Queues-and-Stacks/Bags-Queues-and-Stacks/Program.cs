@@ -1,4 +1,5 @@
 ﻿using System;
+using Bags_Queues_and_Stacks.Services.Bags;
 using Bags_Queues_and_Stacks.Services.Queues;
 using Bags_Queues_and_Stacks.Services.Stacks;
 
@@ -35,6 +36,21 @@ namespace Bags_Queues_and_Stacks
             Console.WriteLine(queue.dequeue());
             Console.WriteLine(queue.dequeue());
             Console.WriteLine(queue.dequeue());
+
+            Console.WriteLine("\n---------------------\n");
+
+            Console.WriteLine("Bag");
+            IBag<int> bag = new LinkedListBag<int>();
+            bag.add(1);
+            bag.add(8);
+            bag.add(3);
+            bag.add(2);
+            bag.add(4);
+
+            foreach (int i in bag)
+            {
+                Console.WriteLine(i);   
+            }
 
             while (true)
             {

@@ -1,6 +1,9 @@
-﻿namespace Bags_Queues_and_Stacks.Services.Queues
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bags_Queues_and_Stacks.Services.Queues
 {
-    public interface IQueue<T>
+    public interface IQueue<T> : IEnumerable<T>
     {
         /// <summary>
         /// Insert a new T into the queue.

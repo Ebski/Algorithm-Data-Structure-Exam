@@ -1,12 +1,9 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bags_Queues_and_Stacks.Services.Stacks
 {
-    public interface IStack<T>
+    public interface IStack<T> : IEnumerable<T>
     {
         /// <summary>
         /// Insert a new T2 into the stack.

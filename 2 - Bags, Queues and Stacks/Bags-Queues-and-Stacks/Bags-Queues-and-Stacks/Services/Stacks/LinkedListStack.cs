@@ -1,8 +1,6 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bags_Queues_and_Stacks.Services.Stacks
 {
@@ -47,6 +45,21 @@ namespace Bags_Queues_and_Stacks.Services.Stacks
                 node = node.next;
             }
             return count;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node current = first;
+            while (current != null)
+            {
+                yield return current.item;
+                current = current.next;
+            }
         }
 
         private class Node
