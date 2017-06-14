@@ -44,7 +44,7 @@ public T dequeue()
 }
 ```
 
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Queues/LinkedListQueue.cs).
 
 It's also possible to make a queue with an array but it's a lot more cumbersome. For this we need to keep a reference to the head and the tail of the objects in the array. When we enqueue we add a new item at the tail, and when we dequeue we remove an item from the head. The problem with this is that we can end up with arrays that looks like this:
 
@@ -53,7 +53,7 @@ It's also possible to make a queue with an array but it's a lot more cumbersome.
 | Array placement | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
 | references      |      |      | head |      |      |      | tail |      |      |
 
-Furthermore we have to resize when the tail reaches the end of the array as well as if the array gets to big. An example of a try of implementing this can be found [here]()
+Furthermore we have to resize when the tail reaches the end of the array as well as if the array gets to big. An example of a try of implementing this can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Queues/ArrayQueue.cs)
 
 ### Stacks
 
@@ -93,7 +93,7 @@ public T pop()
     return item;
 }
 ```
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/LinkedListStack.cs).
 
 ##### Array
 
@@ -135,7 +135,7 @@ public T pop()
         return item;
     }
 ```
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/ArrayStack.cs).
 
 ##### Conclusion
 
