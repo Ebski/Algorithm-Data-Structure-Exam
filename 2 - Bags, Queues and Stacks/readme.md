@@ -6,7 +6,54 @@ Bags, Queues and Stacks are all fundamental data types. They are used to store a
 
 ### Queues
 
+Queues makes use of FIFO (first in first out). The easiest way to make a queue is using Linked List. This is nearly identical to making a Linked list Stack here there is just an extra reference to the last Node while at the same time keeping a reference to the first Node. This is done so new Nodes can be put in at the end of the Linked List. A check is also made to see if the List is empty when the new Node is being created. If thats the case the last Node in the list will also be the first one.
 
+```c#
+ public void enqueue(T item)
+ {
+    Node oldLast = last;
+    last = new Node
+    {
+        item = item,
+        next = oldLast
+    };
+
+    if (isEmpty())
+    {
+        first = last;
+    }
+    else
+    {
+        oldLast.next = last;
+    }
+}
+```
+
+To dequeue from a queue is just as dequeueing from a stack. The only difference is that a check has to be put in to see if the last Node in the list is being removed. If thats the case the last reference is set to 0.
+
+```c#
+public T dequeue()
+{
+    T item = first.item;
+    first = first.next;
+    if (isEmpty())
+    {
+        last = null;
+    }
+    return item;
+}
+```
+
+Code can be found [here]().
+
+It's also possible to make a queue with an array but it's a lot more cumbersome. For this we need to keep a reference to the head and the tail of the objects in the array. When we enqueue we add a new item at the tail, and when we dequeue we remove an item from the head. The problem with this is that we can end up with arrays that looks like this:
+
+| Array values    | null | null | 1    | 2    | 3    | 4    | 5    | null | null |
+| --------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Array placement | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
+| references      |      |      | head |      |      |      | tail |      |      |
+
+Furthermore we have to resize when the tail reaches the end of the array as well as if the array gets to big. An example of a try of implementing this can be found [here]()
 
 ### Stacks
 
@@ -46,11 +93,7 @@ public T pop()
     return item;
 }
 ```
-<<<<<<< Updated upstream
-Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/LinkedListStack.cs).
-=======
 Code can be found [here]().
->>>>>>> Stashed changes
 
 ##### Array
 
@@ -92,11 +135,7 @@ public T pop()
         return item;
     }
 ```
-<<<<<<< Updated upstream
-Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/ArrayStack.cs).
-=======
 Code can be found [here]().
->>>>>>> Stashed changes
 
 ##### Conclusion
 
