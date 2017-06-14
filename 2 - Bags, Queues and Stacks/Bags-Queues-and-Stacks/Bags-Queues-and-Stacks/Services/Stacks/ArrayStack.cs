@@ -9,11 +9,12 @@ namespace Bags_Queues_and_Stacks.Services.Stacks
     public class ArrayStack<T> : IStack<T>
     {
         private T[] s;
-        private int N = 0;
+        private int N;
 
         public ArrayStack()
         {
             s = new T[1];
+            N = 0;
         }
 
         public void push(T item)

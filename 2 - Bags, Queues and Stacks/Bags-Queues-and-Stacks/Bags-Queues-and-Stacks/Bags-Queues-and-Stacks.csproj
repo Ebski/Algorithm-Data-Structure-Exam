@@ -45,6 +45,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Queues\ArrayQueue.cs" />
+    <Compile Include="Services\Queues\IQueue.cs" />
+    <Compile Include="Services\Queues\LinkedListQueue.cs" />
+    <Compile Include="Services\Stacks\ArrayStack.cs" />
+    <Compile Include="Services\Stacks\IStack.cs" />
+    <Compile Include="Services\Stacks\LinkedListStack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

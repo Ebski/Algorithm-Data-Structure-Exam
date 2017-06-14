@@ -6,7 +6,7 @@ Bags, Queues and Stacks are all fundamental data types. They are used to store a
 
 ### Queues
 
-FIFO (first in first out)
+
 
 ### Stacks
 
@@ -46,7 +46,11 @@ public T pop()
     return item;
 }
 ```
+<<<<<<< Updated upstream
 Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/LinkedListStack.cs).
+=======
+Code can be found [here]().
+>>>>>>> Stashed changes
 
 ##### Array
 
@@ -88,7 +92,11 @@ public T pop()
         return item;
     }
 ```
+<<<<<<< Updated upstream
 Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/2%20-%20Bags%2C%20Queues%20and%20Stacks/Bags-Queues-and-Stacks/Bags-Queues-and-Stacks/Services/Stacks/ArrayStack.cs).
+=======
+Code can be found [here]().
+>>>>>>> Stashed changes
 
 ##### Conclusion
 
