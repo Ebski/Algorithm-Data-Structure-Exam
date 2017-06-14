@@ -14,7 +14,7 @@ public int fibonacci(int n)
     return fibonacci(n - 1) + fibonacci(n - 2);
 } 
 ```
-Code can be found [here]()
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/1%20-%20Recursion%20and%20Binary%20search/RecursionAndBinarySearch/RecursionAndBinarySearch/Services/Fibonacci.cs)
 
 This would be a solution on how to get the Fibonacci numbers using a recursive strategy. The Fibonacci Sequence is: 1, 1, 2, 3, 5, 8, 13, 21 .......
 
@@ -40,7 +40,7 @@ It's not always a good idea to use Recursive as it can be very costly on memory.
         return FibonacciNumbers[n];
    } 
 ```
-Code can be found [here]()
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/1%20-%20Recursion%20and%20Binary%20search/RecursionAndBinarySearch/RecursionAndBinarySearch/Services/Fibonacci.cs)
 
 This is due to the amount of calls to the same method is not in anyway controlled and can become very very high. But in other cases such as balanced search trees recursion will work very well, as the cost will be more or less the same at all times. An example of this would be in the union find example of weighted quick union where the root needs to be found. Here the code looks like this.
 
@@ -56,7 +56,7 @@ This is due to the amount of calls to the same method is not in anyway controlle
         return root(i);
     }
 ```
-Code can be found [here]()
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/1%20-%20Recursion%20and%20Binary%20search/UnionFind/UnionFind/Service/WeigthedQuicUnionUF.cs)
 
 As the tree is weighted the cost is close to constant, and will never become to high.
 
