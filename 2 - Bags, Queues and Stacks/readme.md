@@ -46,7 +46,7 @@ public T pop()
     return item;
 }
 ```
-Code can be found [here]()
+Code can be found [here]().
 
 ##### Array
 
@@ -54,15 +54,42 @@ In the Array implementation every operation takes constant amortized time. That 
 
 The Array implementation uses a resize method to make sure that there is not to much wasted space. The idea is that the array should always be between 25% and 100% full. This is done by doubling the array when it's full and cutting the array in half when its on 25% capacity.
 
-    private void resize(int capacity)
+```c#
+private void resize(int capacity)
+{
+    T[] copy = new T[capacity];
+    for (int i = 0; i < N; i++)
     {
-        T[] copy = new T[capacity];
-        for (int i = 0; i < N; i++)
-        {
-            copy[i] = s[i];
-        }
-        s = copy;
+        copy[i] = s[i];
     }
+    s = copy;
+}
+```
+At the same time an integer called N in my example keeps track of how many items are in the stack. This allows easy array access in pus and pop methods.
+
+```c#
+public void push(T item)
+{
+    if (N == s.Length)
+    {
+        resize(2 * s.Length);
+    }
+    s[N++] = item;
+}
+
+public T pop()
+    {
+        T item = s[--N];
+        s[N] = default(T);
+        if (N > 0 && N == s.Length / 4)
+        {
+            resize(s.Length/2);
+        }
+        return item;
+    }
+```
+Code can be found [here]().
+
 ##### Conclusion
 
 The Array implementation should be the one used in most cases, though if there are information that is critical the Linked List should be used. This is due to the always constant time of the Linked List whereas the Array can only provide it amortized.
