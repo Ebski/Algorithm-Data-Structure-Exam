@@ -1,4 +1,10 @@
-﻿namespace Stacks.Services
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bags_Queues_and_Stacks.Services.Stacks
 {
     public class ArrayStack<T> : IStack<T>
     {
@@ -25,7 +31,7 @@
             s[N] = default(T);
             if (N > 0 && N == s.Length / 4)
             {
-                resize(s.Length/2);
+                resize(s.Length / 2);
             }
             return item;
         }
@@ -40,9 +46,9 @@
             return N;
         }
 
-        private void resize(int capacaty)
+        private void resize(int capacity)
         {
-            T[] copy = new T[capacaty];
+            T[] copy = new T[capacity];
             for (int i = 0; i < N; i++)
             {
                 copy[i] = s[i];

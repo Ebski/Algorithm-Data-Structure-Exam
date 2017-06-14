@@ -1,7 +1,7 @@
 ﻿using System;
-using Stacks.Services;
+using Bags_Queues_and_Stacks.Services.Stacks;
 
-namespace Stacks
+namespace Bags_Queues_and_Stacks
 {
     public class Program
     {
@@ -21,7 +21,7 @@ namespace Stacks
 
             while (true)
             {
-                
+
             }
         }
     }
