@@ -32,7 +32,7 @@ private void sort(T[] a, T[] aux, int low, int high)
     merge(a, aux, low, mid, high);
 }  
 ```
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/4%20-%20Merge%20Sort/MergeSort/MergeSort/Services/RecursiveMergeSort.cs).
 
 This is a very efficient way of sorting an array and Merge sort uses at most **N lg N** compares and **6 N lg N** array accesses to sort any array of size N. In comparison to something like insertion sort or selection sort who both uses quadratic or **N*N** time this is a significant improvement. 
 
@@ -57,6 +57,6 @@ if (a[mid + 1].CompareTo(a[mid]) > 0)
 ```
 It's also possible to create a merge sort algorithm that doesn't use recursion. The way to do that is to think of the array being sorted as sub arrays of the size 1. Then the sub arrays are merged together into subarrays of size 2 and then into sub arrays of size 4 and so on. The only downside with this algorithm again is that it uses extra memory proportional to N again due to the auxiliary array.
 
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/4%20-%20Merge%20Sort/MergeSort/MergeSort/Services/MergeSort.cs).
 
 One of the goals about algorithms is to create optimal algorithm and it turns out that merge sort is optimal for sorting when it comes to compares. The lower bound of compares when sorting an algorithm is **N log N** and that is exactly the amount of compares Merge sort does. Merge sort is not optimal with respect to space usage as merge sort still uses extra memory proportional to N. 
