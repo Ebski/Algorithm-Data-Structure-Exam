@@ -107,11 +107,11 @@ The previous examples can be done with the following code:
 ```
 The fun thing about deleting in a BST is that it will skew the BST to the left. What this means is that we will no longer have the average height of **1.39 log N** when deleting is allowed. Instead we will have the average height of **square root N**.
 
-Code for BST can be found [here]().
+Code for BST can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/8%20-%20Balanced%20Search%20Trees/BalancedSearchTrees/BalancedSearchTrees/Services/BST.cs).
 
 To optimize a BST we need to find a way to make sure that the operations have a guaranteed time of **log N**. And for that we use a slight modification called the **Red Black Binary Search Tree** (RBBST). A RBBST does this by balancing the tree every time a Node is inserted or deleted. Therefor we give the Node a boolean attribute colour. If colour is true the link between a Node and its parent is red, and if it's false then the link is black. Now when we create a Node we set the colour of  the link to red. If we have a Node with a red link to its right child we flip the tree to the left. If we have a Node with a red link to its parent and a red link to its left child we flip the parent Node to the right. And if we have a Node with red links to both its children we flip the colours of both and add a red link to the parent. If this is done then the tree will stay balanced. 
 
 So say we put in the sequence of numbers 1,2,3. What would happen is that 1would be placed. Then we would add in 2 and then tree would shift to the left so that 2 is now the root Node with 1 as its left child. 3 would then be put as 2 right child, and we have a balanced search tree.
 
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/8%20-%20Balanced%20Search%20Trees/BalancedSearchTrees/BalancedSearchTrees/Services/RedBlackBST.cs).
 
