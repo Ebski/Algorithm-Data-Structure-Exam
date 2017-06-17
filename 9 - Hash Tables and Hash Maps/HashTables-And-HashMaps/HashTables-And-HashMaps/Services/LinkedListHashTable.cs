@@ -84,6 +84,11 @@ namespace HashTables_And_HashMaps.Services
             return (key.GetHashCode() & 0x7fffffff % M);
         }
 
+        public int size()
+        {
+            throw new System.NotImplementedException();
+        }
+
         private class Node
         {
             public Key key;

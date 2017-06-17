@@ -15,9 +15,13 @@ namespace HashTables_And_HashMaps
             }
 
             Console.WriteLine(ht.get(50));
-            ht.delete(50);
-            Console.WriteLine(ht.get(50));
-
+            Console.WriteLine(ht.size());
+            for (int i = 80; i > 0; i--)
+            {
+                ht.delete(i);
+            }
+            Console.WriteLine(ht.size());
+            ht.put(50, 50);
             while (true)
             {
                 
