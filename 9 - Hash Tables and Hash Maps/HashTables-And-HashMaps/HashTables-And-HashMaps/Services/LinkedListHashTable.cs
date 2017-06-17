@@ -1,14 +1,18 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace HashTables_And_HashMaps.Services
 {
     public class LinkedListHashTable<Key, Value> : IHashTable<Key, Value>
     {
-        private int M = 97;
+        private int N;
+        private int M;
         private Node[] st;
 
         public LinkedListHashTable()
         {
+            N = 0;
+            M = 2;
             st = new Node[M];
         }
 
@@ -24,6 +28,8 @@ namespace HashTables_And_HashMaps.Services
                 }
             }
             st[i] = new Node(key, val, st[i]);
+            N++;
+            doubleArrays();
         }
 
         public Value get(Key key)
@@ -33,7 +39,7 @@ namespace HashTables_And_HashMaps.Services
             {
                 if (key.Equals(x.key))
                 {
-                    return (Value) x.val;
+                    return (Value)x.val;
                 }
             }
             return default(Value);
@@ -77,6 +83,8 @@ namespace HashTables_And_HashMaps.Services
                     st[i] = current.next;
                 }
             }
+            N--;
+            halfArrays();
         }
 
         private int hash(Key key)
@@ -86,7 +94,57 @@ namespace HashTables_And_HashMaps.Services
 
         public int size()
         {
-            throw new System.NotImplementedException();
+            return N;
+        }
+
+        private void doubleArrays()
+        {
+            if ((N / M) * 10 < 50)
+            {
+                return;
+            }
+            Node[] oldST = st;
+            M = M * 2;
+            st = new Node[M];
+            N = 0;
+
+            foreach (Node n in oldST)
+            {
+                Node node = n;
+                if (node != null)
+                {
+                    while (node != null)
+                    {
+                        put(node.key, node.val);
+                        node = node.next;
+                    }
+                }
+            }
+        }
+
+        private void halfArrays()
+        {
+            if ((N / M) * 10 < 70)
+            {
+                return;
+            }
+            Node[] oldST = st;
+            M = M / 2;
+            st = new Node[M];
+            N = 0;
+
+            foreach (Node n in oldST)
+            {
+                Node node = n;
+                if (node != null)
+                {
+                    while (node != null)
+                    {
+                        put(node.key, node.val);
+                        node = node.next;
+                    }
+                }
+            }
         }
 
         private class Node
