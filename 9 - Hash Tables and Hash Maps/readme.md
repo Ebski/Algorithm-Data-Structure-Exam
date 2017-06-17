@@ -56,7 +56,7 @@ The search works the same way. Again we hash the key and look in the Array if it
 
 Deleting is a little bit problematic but still fairly simple. We start by finding the Node we want to delete and also checks if there is a Node before that Node. If there is we set the previous Nodes next to the Node we want to deletes next, and the Node we want to deletes next to null. If there isn't we simply move the next Node into the array, thereby deleting the Node in front of it.
 
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/9%20-%20Hash%20Tables%20and%20Hash%20Maps/HashTables-And-HashMaps/HashTables-And-HashMaps/Services/LinkedListHashTable.cs).
 
 ### Linear Probing
 
@@ -81,7 +81,7 @@ To implement this we use two arrays, one for Keys and one for Values. When we in
 ```
 We do the exact same thing for select and delete. So an upside to this method over the Linked list is that deletion becomes simpler. 
 
-Code can be found [here]().
+Code can be found [here](https://github.com/Ebski/Algorithm-Data-Structure-Exam/blob/master/9%20-%20Hash%20Tables%20and%20Hash%20Maps/HashTables-And-HashMaps/HashTables-And-HashMaps/Services/PropingHashTable.cs).
 
 For both table it's needed that we have some resizing mechanisms in place to keep the size of M close to the optimal size for M. 
 
