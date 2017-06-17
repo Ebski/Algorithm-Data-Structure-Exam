@@ -45,11 +45,11 @@
             {
                 if (keys[i].Equals(key))
                 {
+                    keys[i] = default(Key);
+                    vals[i] = default(Value);
                     break;
                 }
             }
-            keys[i] = default(Key);
-            vals[i] = default(Value);
         }
 
         private int hash(Key key)
