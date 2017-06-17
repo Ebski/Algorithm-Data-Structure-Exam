@@ -67,6 +67,8 @@ namespace HashTables_And_HashMaps.Services
                 if (current.next == null)
                 {
                     previous.next = null;
+                    N--;
+                    halfArrays();
                     return;
                 }
                 previous.next = current.next;
