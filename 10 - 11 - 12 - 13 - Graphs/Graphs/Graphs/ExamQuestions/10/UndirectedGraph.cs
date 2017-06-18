@@ -5,7 +5,7 @@ using Graphs.Services.Model;
 
 namespace Graphs.ExamQuestions._10
 {
-    public class UndirectedGrap
+    public class UndirectedGraph
     {
         public void showDepthFirstAndBreathFirstSearches()
         {
@@ -25,10 +25,6 @@ namespace Graphs.ExamQuestions._10
             foreach (Node node in bfNodes)
             {
                 Console.WriteLine(node.id);
-            }
-            while (true)
-            {
-
             }
         }
 

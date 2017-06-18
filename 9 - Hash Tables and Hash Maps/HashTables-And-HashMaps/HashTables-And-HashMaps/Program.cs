@@ -20,7 +20,6 @@ namespace HashTables_And_HashMaps
             }
 
             Console.WriteLine(ht.size());
-            
 
             while (true)
             {

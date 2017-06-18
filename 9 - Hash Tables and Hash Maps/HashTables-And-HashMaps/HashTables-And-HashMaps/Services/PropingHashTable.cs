@@ -95,7 +95,7 @@ namespace HashTables_And_HashMaps.Services
 
         private void halfArrays()
         {
-            if ((count * 100) / keys.Length >= 30)
+            if ((count * 100) / keys.Length >= 10)
             {
                 return;
             }

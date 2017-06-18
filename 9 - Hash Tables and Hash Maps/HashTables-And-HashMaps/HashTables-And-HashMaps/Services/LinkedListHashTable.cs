@@ -62,28 +62,14 @@ namespace HashTables_And_HashMaps.Services
             {
                 return;
             }
-            if (previous != null)
+            if (previous == null)
             {
-                if (current.next == null)
-                {
-                    previous.next = null;
-                    N--;
-                    halfArrays();
-                    return;
-                }
-                previous.next = current.next;
-                current.next = null;
+                st[i] = current.next;
             }
             else
             {
-                if (current.next == null)
-                {
-                    st[i] = null;
-                }
-                else
-                {
-                    st[i] = current.next;
-                }
+                previous.next = current.next;
+                current.next = null;
             }
             N--;
             halfArrays();

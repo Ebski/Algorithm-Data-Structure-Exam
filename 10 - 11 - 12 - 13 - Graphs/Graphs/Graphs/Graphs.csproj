@@ -43,11 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExamQuestions\10\UndirectedGrap.cs" />
+    <Compile Include="ExamQuestions\10\UndirectedGraph.cs" />
+    <Compile Include="ExamQuestions\11\DirectedGraph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Algorithms\BreathFirstSearch.cs" />
+    <Compile Include="Services\Algorithms\CycleDetection.cs" />
     <Compile Include="Services\Algorithms\DepthFirstSearch.cs" />
+    <Compile Include="Services\Algorithms\MinimumSpanningTree.cs" />
+    <Compile Include="Services\Algorithms\TypologicalSort.cs" />
     <Compile Include="Services\Model\DisjointSet.cs" />
     <Compile Include="Services\Model\Edge.cs" />
     <Compile Include="Services\Model\Graph.cs" />

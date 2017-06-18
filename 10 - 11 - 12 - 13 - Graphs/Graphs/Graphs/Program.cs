@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Graphs.ExamQuestions._10;
-using Graphs.Services.Algorithms;
-using Graphs.Services.Model;
+﻿using Graphs.ExamQuestions._10;
+using Graphs.ExamQuestions._11;
 
 namespace Graphs
 {
@@ -10,8 +7,16 @@ namespace Graphs
     {
         public static void Main(string[] args)
         {
-            UndirectedGrap examQuestion10 = new UndirectedGrap();
+            UndirectedGraph examQuestion10 = new UndirectedGraph();
             examQuestion10.showDepthFirstAndBreathFirstSearches();
+
+            DirectedGraph examQuestion11 = new DirectedGraph();
+            examQuestion11.showCycleDetection();
+
+            while (true)
+            {
+                
+            }
         }
     }
 }
