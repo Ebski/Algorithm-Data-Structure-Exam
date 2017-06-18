@@ -24,6 +24,7 @@ namespace Graphs.ExamQuestions._11
                 Console.WriteLine(node.id);
             }
 
+            // Not a good example as there are cycles in the graph.
             Console.WriteLine("\n\nTypological Sort: \n");
             foreach (Node node in typologicalSortedStack)
             {
