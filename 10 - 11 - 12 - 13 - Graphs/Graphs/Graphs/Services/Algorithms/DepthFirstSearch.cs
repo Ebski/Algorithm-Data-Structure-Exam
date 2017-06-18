@@ -27,8 +27,8 @@ namespace Graphs.Services.Algorithms
                 if (visited.Contains(end)) continue;
                 visited.Add(end);
                 queue.Enqueue(end);
+                search(queue, visited, result);
             }
-            search(queue, visited, result);
         }
     }
 }
