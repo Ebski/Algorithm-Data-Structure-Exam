@@ -1,5 +1,6 @@
 ﻿using Graphs.ExamQuestions._10;
 using Graphs.ExamQuestions._11;
+using Graphs.ExamQuestions._12;
 
 namespace Graphs
 {
@@ -12,6 +13,9 @@ namespace Graphs
 
             DirectedGraph examQuestion11 = new DirectedGraph();
             examQuestion11.showCycleDetection();
+
+            WeigthedGraph examQuestion12 = new WeigthedGraph();
+            examQuestion12.findShortestPath();
 
             while (true)
             {
